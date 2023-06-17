@@ -1,0 +1,21 @@
+{
+  "name": "eslint-config-subjective-rulezz",
+  "version": "1.0.0",
+  "description": "Subjective ES/TSLint rules",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivkovych/eslint-config-subjective-rulezz.git"
+  },
+  "keywords": [
+    "ESLint",
+    "TSLint",
+    "codestyle"
+  ],
+  "author": "sivkovych <sivkovych.p@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sivkovych/eslint-config-subjective-rulezz/issues"
+  },
+  "homepage": "https://github.com/sivkovych/eslint-config-subjective-rulezz#readme"
+}
