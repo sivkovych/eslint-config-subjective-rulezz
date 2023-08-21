@@ -91,7 +91,7 @@ module.exports = {
         "complexity": [
             "error",
             {
-                "max": 12
+                "max": 20
             }
         ],
         "consistent-return": "off",
@@ -471,7 +471,7 @@ module.exports = {
         ],
         "function-paren-newline": [
             "error",
-            "never"
+            "consistent"
         ],
         "generator-star-spacing": [
             "error",
@@ -506,10 +506,7 @@ module.exports = {
             "error",
             "above"
         ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
+        "linebreak-style": "off",
         /*
          * Handled by the @typescript-eslint/lines-around-comment rule
          */
@@ -645,6 +642,10 @@ module.exports = {
          * TypeScript
          * https://typescript-eslint.io/rules/
          */
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
         "@typescript-eslint/ban-ts-comment": [
             "error",
             {
@@ -744,6 +745,7 @@ module.exports = {
             {
                 "selector": "classProperty",
                 "modifiers": [
+                    "readonly",
                     "static"
                 ],
                 "format": [
@@ -765,7 +767,8 @@ module.exports = {
             }
         ],
         "@typescript-eslint/no-unsafe-enum-comparison": "off",
-        "@typescript-eslint/no-confusing-non-null-assertion": "error",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-confusing-non-null-assertion": "off",
         "@typescript-eslint/no-confusing-void-expression": [
             "error",
             {
@@ -785,6 +788,7 @@ module.exports = {
         "@typescript-eslint/no-extraneous-class": "error",
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/no-import-type-side-effects": "off",
+        "@typescript-eslint/prefer-for-of": "off",
         "@typescript-eslint/no-misused-promises": [
             "error",
             {
@@ -834,7 +838,22 @@ module.exports = {
         "@typescript-eslint/prefer-return-this-type": "error",
         "@typescript-eslint/promise-function-async": "off",
         "@typescript-eslint/require-array-sort-compare": "error",
-        "@typescript-eslint/sort-type-constituents": "error",
+        "@typescript-eslint/sort-type-constituents": ["error", {
+            "groupOrder": [
+                "keyword",
+                "named",
+                "operator",
+                "literal",
+                "function",
+                "import",
+                "conditional",
+                "object",
+                "tuple",
+                "intersection",
+                "union",
+                "nullish"
+            ]
+        }],
         "@typescript-eslint/strict-boolean-expressions": "error",
         "@typescript-eslint/switch-exhaustiveness-check": "error",
         "@typescript-eslint/no-inferrable-types": [
@@ -958,10 +977,7 @@ module.exports = {
             }
         ],
         "@typescript-eslint/no-extra-parens": "off",
-        "@typescript-eslint/object-curly-spacing": [
-            "error",
-            "never"
-        ],
+        "@typescript-eslint/object-curly-spacing": ["error", "always"],
         "@typescript-eslint/padding-line-between-statements": "off",
         "@typescript-eslint/quotes": [
             "error",

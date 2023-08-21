@@ -1,5 +1,5 @@
 # eslint-config-subjective-rulezz
-Version: 1.0.0
+Version: 1.1.0
 ## Description
 Subjective ES/TSLint rules. 
 Feel free to use, open issues, create new branches and contribute otherwise.
